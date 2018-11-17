@@ -1,0 +1,67 @@
+---
+title: "Pydata DC 2018"
+author: "Daniel Chen"
+date: "11/17/2018"
+output: ioslides_presentation
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+# knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Hello
+
+## I'm Daniel
+
+## Python!
+
+```{r}
+if (!require(reticulate)) {
+    install.packages('reticulate')
+}
+```
+
+
+## Class attributes
+
+```{python}
+class PyData(object):
+    def __init__(self, year):
+        self.year = year
+        return None
+```
+
+```{python}
+conf = PyData(2018)
+print(conf.year)
+
+```
+
+## Creating new attributes
+
+```{r}
+conf.talk = 'lightning'
+print(conf.talk)
+```
+
+## Getters and Setters?
+
+```{python}
+class PyData(object):
+    def __init__(self, year):
+        self.year = year
+
+    def get_talk(self):
+        return self.talk
+
+    def set_talk(self, value):
+        self.talk = value
+
+conf = PyData(2018)
+conf.set_talk('lightning')
+print(conf.get_talk())
+```
+
+## This is 
